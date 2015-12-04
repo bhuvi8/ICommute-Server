@@ -1,0 +1,24 @@
+sever design
+ - Initial reference server implementation
+
+exposed api's:
+API's are unstable and subject to change
+
+1. register emp_id
+POST http://server_name:port/?emp_id=<empid>
+registers empid in db and returns a unique id...which is used for all further communications with server
+
+2. check id registered or still valid
+GET http://server:port/?u_id=<uid>
+returns success else if not found in db returns unauthosized access(403)
+if u_id is not passed returns not found. (404)
+
+3. get route map data file sha1 checksum
+GET http://server:port/routemap/?u_id=<uid>
+returns sha1 checksum of routemap data file after validation u_id.
+if u_id is not valid returns unauthorised access(403)
+
+4. download route map data file
+GET http://server:port/routemap/download/?u_id=<uid>
+returns routemap data file as a download after validating uid.
+if u_id is not valid returns unauthorised access(403)

@@ -1,0 +1,11 @@
+{
+  "name": "ICommute-server",
+  "description": "ICommute server application",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "checksum": "^0.1.1",
+    "express": "x.x",
+    "mongodb": "^2.0.49"
+  }
+}

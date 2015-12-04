@@ -1,0 +1,8 @@
+*.csv
+*.dat
+
+node_modules/
+npm-debug.log
+
+# backup files
+*~
